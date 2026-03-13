@@ -7,21 +7,29 @@
     
 </head>
 <body>
-<?php
 
-?>
 <header>
     <h1>Bem-vindo ao Trabalho Inicial</h1>
 </header>
 
-<nav>
-    <a href="#home">Home</a> |
-    <a href="#about">About</a> |
-    <a href="#contact">Contact</a>
-</nav>
-
 <main>
-    <p>This is the main content of the page.</p>
+    <form>
+        <label for="tensao">Tensão/Voltagem (Vcc):</label><br>
+        <input type="number" id="tensao" name="tensao"><br>
+        <label for="corrente">Corrente (i):</label><br>
+        <input type="number" id="corrente" name="corrente"><br><br>
+        <label for="corrente">Tensão do LED (Vl):</label><br>
+        <input type="number" id="corrente" name="corrente"><br><br>
+        <input type="submit" value="Enviar">
+        <?php
+            if($_GET["tensao"] != null && $_GET["corrente"] != null) {
+                $tensao = $_GET["tensao"];
+                $corrente = $_GET["corrente"];
+            }else{
+                echo "<h2 id='semValor'>É necessário informar os valores da tensão e da corrente</h2>";
+            }
+        ?>
+    </form>
 </main>
 
 <footer>
