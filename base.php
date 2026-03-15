@@ -13,23 +13,27 @@
 </header>
 
 <main>
-    <form>
-        <label for="tensao">Tensão/Voltagem (Vcc):</label><br>
-        <input type="number" id="tensao" name="tensao"><br>
-        <label for="corrente">Corrente (i):</label><br>
-        <input type="number" id="corrente" name="corrente"><br><br>
-        <label for="corrente">Tensão do LED (Vl):</label><br>
-        <input type="number" id="corrente" name="corrente"><br><br>
-        <input type="submit" value="Enviar">
-        <?php
-            if($_GET["tensao"] != null && $_GET["corrente"] != null) {
-                $tensao = $_GET["tensao"];
-                $corrente = $_GET["corrente"];
-            }else{
-                echo "<h2 id='semValor'>É necessário informar os valores da tensão e da corrente</h2>";
-            }
-        ?>
-    </form>
+    <div id="ResistorIdeal">
+        <form>
+            <label for="tensao">Tensão da Fonte (Vcc):</label><br>
+            <input type="number" id="tensao" name="tensao"><br>
+            <label for="corrente">Corrente do LED (i):</label><br>
+            <input type="number" id="corrente" name="corrente"><br>
+            <label for="tensaoLED">Tensão do LED (Vl):</label><br>
+            <input type="number" id="tensaoLED" name="tensaoLED"><br>
+            <label for="nLed">Nº de LEDs em série:</label><br>
+            <input type="number" id="nLed" name="nLed"><br><br>
+            <input type="submit" value="Calcular Resistor">
+            <?php
+                if($_GET["tensao"] != null && $_GET["corrente"] != null) {
+                    $tensao = $_GET["tensao"];
+                    $corrente = $_GET["corrente"];
+                }else{
+                    echo "<h2 id='semValor'>É necessário informar os valores da tensão e da corrente</h2>";
+                }
+            ?>
+        </form>
+    </div>
 </main>
 
 <footer>
