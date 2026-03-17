@@ -1,0 +1,12 @@
+.card-content{
+    padding: 20px;
+    text-align: center;
+    align-items: center;
+}
+.card-header {
+    background-color: #eae7e7;
+}
+.card-title{
+    font-weight: bold;
+    font-size: 21px;
+}
