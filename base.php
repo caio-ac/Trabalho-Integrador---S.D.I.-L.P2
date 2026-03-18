@@ -6,16 +6,16 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<title>Circuitos e PHP</title>
 		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.1.3/dist/css/bootstrap.min.css"
-		      integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
-		      crossorigin="anonymous">
+              integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
+              crossorigin="anonymous">
 		<link rel="stylesheet" href="assets/style.css">
 	</head>
 	<body>
-		
+
 		<header>
-		
+
 		</header>
-		
+
 		<main>
 			<div class="container">
 				<div class="row">
@@ -34,7 +34,7 @@
 													<span class="input-group-text" id="inputGroupPrepend">@</span>
 												</div>
 												<input type="number" id="tensaoFonte" name="tensaoFonte"
-												       class="form-control" required><br>
+                                                       class="form-control" required><br>
 											</div>
 										</div>
 										<div class="col-md-6 mb-4">
@@ -44,7 +44,7 @@
 													<span class="input-group-text" id="inputGroupPrepend">@</span>
 												</div>
 												<input type="number" id="corrente" name="corrente" class="form-control"
-												       required><br>
+                                                       required><br>
 											</div>
 										</div>
 									</div>
@@ -56,7 +56,7 @@
 													<span class="input-group-text" id="inputGroupPrepend">@</span>
 												</div>
 												<input type="number" id="tensaoLED" name="tensaoLED"
-												       class="form-control" required><br>
+                                                       class="form-control" required><br>
 											</div>
 										</div>
 										<div class="col-md-6 mb-3">
@@ -66,45 +66,44 @@
 													<span class="input-group-text" id="inputGroupPrepend">@</span>
 												</div>
 												<input type="number" id="nLED" name="nLED" class="form-control"
-												       required><br>
+                                                       required><br>
 											</div>
 										</div>
 									</div>
 									<div class="form-row">
 										<br><input type="submit" value="Calcular Resistor" class="btn btn-primary"
-										           id="Enviar">
+                                                   id="Enviar"><br>
 									</div>
-									<?php
-									if ($_GET["tensaoFonte"] != null && $_GET["corrente"] != null && $_GET["tensaoLED"] != null && $_GET["nLED"] != null) {
-										$tensaoFonte = $_GET["tensaoFonte"];
-										$corrente = $_GET["corrente"];
-										$tensaoLED = $_GET["tensaoLED"];
-										$nLED = $_GET["nLED"];
-										if ($tensaoLED * $nLED > $tensaoFonte) {
-											echo "<h2>A tensão total dos LEDs nunca pode ser maior que a tensão da fonte!</h2>";
-										} else {
-											$resistor = ($tensaoFonte - $tensaoLED * $nLED) / $corrente;
-											
-										}
-										
-									} else {
-										echo "<h2 id='semValor'>É necessário informar os valores da tensão da fonte, da corrente do LED, tensão do LED e número de LEDs em série</h2>";
-									}
-									?>
+                                    <?php
+                                    if ($_GET["tensaoFonte"] != null && $_GET["corrente"] != null && $_GET["tensaoLED"] != null && $_GET["nLED"] != null) {
+                                        $tensaoFonte = $_GET["tensaoFonte"];
+                                        $corrente = $_GET["corrente"];
+                                        $tensaoLED = $_GET["tensaoLED"];
+                                        $nLED = $_GET["nLED"];
+                                        if ($tensaoLED * $nLED > $tensaoFonte) {
+                                            echo "<h2>A tensão total dos LEDs nunca pode ser maior que a tensão da fonte!</h2>";
+                                        } else {
+                                            $resistor = ($tensaoFonte - $tensaoLED * $nLED) / $corrente;
+                                            echo "<div class=\"alert alert-success\" role=\"alert\"><h4 class=\"alert-heading\">Cálculo realizado com sucesso!</h4><hr><p class=\"mb-0\">Resistor Ideal: $resistor ohms</p></div>";
+                                        }
+                                    } else {
+                                        echo "<div class=\"alert alert-warning alert-dismissible fade show\" role=\"alert\"><strong>É necessário preencher os campos de Tensão da Fonte, Corrente do LED, Tensão do LED e o número de LEDs em série</strong> </div>";
+                                    }
+                                    ?>
 								</div>
 							</form>
 						</div>
 					</div>
 					<div class="col-sm">
-					
+
 					</div>
 				</div>
 			</div>
 		</main>
-		
+
 		<footer>
 			<p>&copy; 2026 Nosso Projetinho</p>
 		</footer>
-	
+
 	</body>
 </html>
