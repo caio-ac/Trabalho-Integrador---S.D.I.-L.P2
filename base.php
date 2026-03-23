@@ -28,19 +28,19 @@
 								<div class="card-content">
 									<div class="form-row">
 										<div class="col-md-6 mb-3">
-											<label for="tensaoFonte">Tensão da Fonte (Vcc):</label><br>
+											<label for="tensaoFonte">Tensão da Fonte:</label><br>
 											<div class="input-group">
 												<div class="input-group-prepend">
-													<span class="input-group-text" id="inputGroupPrepend">@</span>
+													<span class="input-group-text" id="inputGroupPrepend"><i>V<sub>fonte</sub></i></span>
 												</div>
 												<input type="number" id="tensaoFonte" name="tensaoFonte" class="form-control" ><br>
 											</div>
 										</div>
 										<div class="col-md-6 mb-4">
-											<label for="corrente">Corrente do LED (i):</label><br>
+											<label for="corrente">Corrente do LED:</label><br>
 											<div class="input-group">
 												<div class="input-group-prepend">
-													<span class="input-group-text" id="inputGroupPrepend">@</span>
+													<span class="input-group-text" id="inputGroupPrepend"><i>I<sub>LED</sub></i></span>
 												</div>
 												<input type="number" id="corrente" name="corrente" class="form-control"><br>
 											</div>
@@ -48,10 +48,10 @@
 									</div>
 									<div class="form-row">
 										<div class="col-md-6 mb-3">
-											<label for="tensaoLED">Tensão do LED (Vl):</label><br>
+											<label for="tensaoLED">Tensão do LED:</label><br>
 											<div class="input-group">
 												<div class="input-group-prepend">
-													<span class="input-group-text" id="inputGroupPrepend">@</span>
+													<span class="input-group-text" id="inputGroupPrepend"><i>V<sub>LED</sub></i></span>
 												</div>
 												<input type="number" id="tensaoLED" name="tensaoLED" class="form-control"><br>
 											</div>
@@ -60,7 +60,7 @@
 											<label for="nLED">Nº de LEDs em série:</label><br>
 											<div class="input-group">
 												<div class="input-group-prepend">
-													<span class="input-group-text" id="inputGroupPrepend">@</span>
+													<span class="input-group-text" id="inputGroupPrepend"><i>N</i></span>
 												</div>
 												<input type="number" id="nLED" name="nLED" class="form-control"><br>
 											</div>
