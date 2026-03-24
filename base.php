@@ -21,7 +21,7 @@
 				<div class="row">
 					<div class="col-sm">
 						<div id="ResistorIdeal" class="card h-100 shadow-lg p-3 mb-5 bg-body-tertiary rounded">
-							<form action="base.php" method="post">
+							<form action="base.php" method="get">
 								<div class="card-header">
 									<h5 class="card-title">Calculadora de Resistor ideal para LEDs em série</h5>
 								</div>
@@ -76,18 +76,23 @@
 									
 									</div>
                                     <?php
-	                                    if (isset($_POST["tensaoFonte"]) && isset($_POST["corrente"])  && isset($_POST["tensaoLED"]) && isset($_POST["nLED"]) ) {
-	                                        $tensaoFonte = $_POST["tensaoFonte"];
-	                                        $corrente = $_POST["corrente"];
-	                                        $tensaoLED = $_POST["tensaoLED"];
-	                                        $nLED = $_POST["nLED"];
-	                                        if ($tensaoLED * $nLED > $tensaoFonte) {
-	                                            echo "<h2>A tensão total dos LEDs nunca pode ser maior que a tensão da fonte!</h2>";
-	                                        } else {
-	                                            $resistor = ($tensaoFonte - $tensaoLED * $nLED) / $corrente;
-	                                            echo "<br><div class=\"alert alert-success\" role=\"alert\"><h4 class=\"alert-heading\">Cálculo realizado com sucesso!</h4><hr><p class=\"mb-0\">Resistor Ideal: $resistor ohms</p></div>";
-												
-	                                        }
+	                                    if (isset($_GET["tensaoFonte"]) && isset($_GET["corrente"])  && isset($_GET["tensaoLED"]) && isset($_GET["nLED"]) ) {
+											if($_GET["tensaoFonte"] == null || $_GET["corrente"] == null || $_GET["tensaoLED"] == null || $_GET["nLED"] == null) {
+												echo "<br><br><div class=\"alert alert-danger d-flex align-items-center\" role=\"alert\"><svg class=\" p-2 flex-shrink-1 me-3\" role=\"img\" aria-label=\"Danger:\"><use xlink:href=\"#exclamation-triangle-fill\"/></svg>
+		                                    <div><strong>É necessário preencher os campos de Tensão da Fonte, Corrente do LED, Tensão do LED e o número de LEDs em série para obter o valor do resistor</strong></div></div>";
+											}else{
+		                                        $tensaoFonte = $_GET["tensaoFonte"];
+		                                        $corrente = $_GET["corrente"];
+		                                        $tensaoLED = $_GET["tensaoLED"];
+		                                        $nLED = $_GET["nLED"];
+		                                        if ($tensaoLED * $nLED > $tensaoFonte) {
+		                                            echo "<h2>A tensão total dos LEDs nunca pode ser maior que a tensão da fonte!</h2>";
+		                                        } else {
+		                                            $resistor = ($tensaoFonte - $tensaoLED * $nLED) / $corrente;
+		                                            echo "<br><div class=\"alert alert-success\" role=\"alert\"><h4 class=\"alert-heading\">Cálculo realizado com sucesso!</h4><hr><p class=\"mb-0\">Resistor Ideal: $resistor ohms</p></div>";
+													
+		                                        }
+											}
 	                                    } else {
 	                                        echo "<br><br><div class=\"alert alert-warning d-flex align-items-center\" role=\"alert\"><svg class=\" p-2 flex-shrink-1 me-3\" role=\"img\" aria-label=\"Warning:\"><use xlink:href=\"#exclamation-triangle-fill\"/></svg>
 		                                    <div><strong>É necessário preencher os campos de Tensão da Fonte, Corrente do LED, Tensão do LED e o número de LEDs em série para obter o valor do resistor</strong></div></div>";
