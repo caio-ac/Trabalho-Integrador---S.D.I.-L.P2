@@ -6,6 +6,8 @@
 }
 .card-header {
     background-color: #eae7e7;
+    align-content: center;
+    text-align: center;
 }
 .card-title{
     font-weight: bold;
