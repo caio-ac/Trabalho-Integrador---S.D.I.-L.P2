@@ -125,16 +125,16 @@
 											<label for="faixa1">Faixa 1:</label><br>
 											<div class="input-group">
 												<select id="faixa1" name="faixa1" class="form-control">
-													<option for="preto">Preto</option>
-													<option for="marrom">Marrom</option>
-													<option for="vermelho">Vermelho</option>
-													<option for="laranja">Laranja</option>
-													<option for="amarelo">Amarelo</option>
-													<option for="verde">Verde</option>
-													<option for="azul">Azul</option>
-													<option for="violeta">Violeta</option>
-													<option for="cinza">Cinza</option>
-													<option for="branco">Branco</option>
+													<option>Preto</option>
+													<option>Marrom</option>
+													<option>Vermelho</option>
+													<option>Laranja</option>
+													<option>Amarelo</option>
+													<option>Verde</option>
+													<option>Azul</option>
+													<option>Violeta</option>
+													<option>Cinza</option>
+													<option>Branco</option>
 												</select>
 											</div>
 										</div>
@@ -142,16 +142,16 @@
 											<label for="faixa2">Faixa 2:</label><br>
 											<div class="input-group">
 												<select id="faixa2" name="faixa2" class="form-control">
-													<option for="preto">Preto</option>
-													<option for="marrom">Marrom</option>
-													<option for="vermelho">Vermelho</option>
-													<option for="laranja">Laranja</option>
-													<option for="amarelo">Amarelo</option>
-													<option for="verde">Verde</option>
-													<option for="azul">Azul</option>
-													<option for="violeta">Violeta</option>
-													<option for="cinza">Cinza</option>
-													<option for="branco">Branco</option>
+													<option>Preto</option>
+													<option>Marrom</option>
+													<option>Vermelho</option>
+													<option>Laranja</option>
+													<option>Amarelo</option>
+													<option>Verde</option>
+													<option>Azul</option>
+													<option>Violeta</option>
+													<option>Cinza</option>
+													<option>Branco</option>
 												</select>
 											</div>
 										</div>
@@ -161,16 +161,16 @@
 											<label for="faixa3">Faixa 3:</label><br>
 											<div class="input-group">
 												<select id="faixa3" name="faixa3" class="form-control">
-													<option for="preto">Preto</option>
-													<option for="marrom">Marrom</option>
-													<option for="vermelho">Vermelho</option>
-													<option for="laranja">Laranja</option>
-													<option for="amarelo">Amarelo</option>
-													<option for="verde">Verde</option>
-													<option for="azul">Azul</option>
-													<option for="violeta">Violeta</option>
-													<option for="cinza">Cinza</option>
-													<option for="branco">Branco</option>
+													<option>Preto</option>
+													<option>Marrom</option>
+													<option>Vermelho</option>
+													<option>Laranja</option>
+													<option>Amarelo</option>
+													<option>Verde</option>
+													<option>Azul</option>
+													<option>Violeta</option>
+													<option>Cinza</option>
+													<option>Branco</option>
 												</select>
 											</div>
 										</div>
