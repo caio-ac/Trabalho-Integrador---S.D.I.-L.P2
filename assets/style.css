@@ -13,10 +13,24 @@
     font-weight: bold;
     font-size: 20px;
 }
-main{
-     margin: 60px;
+body {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+main {
+    flex: 1;
+    margin: 60px;
 }
 .alert{
     font-size: 19px;
     text-align: center;
+}
+svg{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    max-width: 600px;
 }
